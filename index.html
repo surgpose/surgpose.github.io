@@ -52,13 +52,13 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <!-- <a class="navbar-item" href="https://keunhong.com">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
+      </a> -->
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -76,7 +76,7 @@
             PhotoShape
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -91,29 +91,31 @@
           <h1 class="title is-1 publication-title">SurgPose: a Dataset for Articulated Robotic Surgical Tool Pose Estimation and Tracking</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Zijian Wu</a><sup>1</sup>,</span>
+              <a href="">Zijian Wu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.ca/citations?hl=en&user=W9CDWWAAAAAJ&view_op=list_works&sortby=pubdate">Adam Schmidt</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="">Randy Moore</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="">Haoying Zhou</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="">Alexandre Banks</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="">Peter Kazanzides</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="">Septimiu E. Salcudean</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>University of British Columbia,</span>
+            <span class="author-block"><sup>2</sup>Intuitive Surgical,</span>
+            <span class="author-block"><sup>3</sup>Worcester Polytechnic Institute,</span>
+            <span class="author-block"><sup>4</sup>Johns Hopkins University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -178,21 +180,20 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
-      </video>
+      </video> -->
+      <img src="./static/images/teaser.png" alt="teaser image."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">SurgPose</span> provides keypoints annotation, stereo frames, and kinematics for multi-class surgical tools.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -247,7 +248,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -258,10 +259,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Accurate and efficient surgical robotic tool pose estimation is of fundamental significance to downstream applications such as augmented reality (AR) in surgical training and learning-based autonomous manipulation. 
+            While significant advancements have been made in pose estimation for humans and animals, it is still a challenge in surgical robotics due to the scarcity of published data. The relatively large absolute error of the da Vinci end effector kinematics and arduous calibration procedure make calibrated kinematics data collection expensive. 
+            Driven by this limitation, we collected a dataset, dubbed SurgPose, providing instance-aware semantic keypoints and skeletons for visual surgical tool pose estimation and tracking.
+            By marking keypoints using ultraviolet (UV) reactive paint, which is invisible under white light and fluorescent under UV light, we execute the same trajectory under different lighting conditions to collect raw videos and keypoint annotations, respectively.
+            The SurgPose dataset consists of approximately 120k surgical instrument instances (80k for training and 40k for validation) of 6 categories.
+            Each instrument instance is labeled with 7 semantic keypoints. 
+            Since the videos are collected in stereo pairs, the 2D pose can be lifted to 3D based on stereo-matching depth. 
+            In addition to releasing the dataset, we test a few baseline approaches to surgical instrument tracking to demonstrate the utility of SurgPose.
+            The code and dataset will be publicly available.
           </p>
-          <p>
+          <!-- <p>
             Our approach augments neural radiance fields
             (NeRF) by optimizing an
             additional continuous volumetric deformation field that warps each observed point into a
@@ -283,14 +291,14 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -298,7 +306,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -310,7 +318,7 @@
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -322,11 +330,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -341,7 +349,7 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
     </div>
     <!--/ Matting. -->
 
@@ -351,7 +359,7 @@
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -381,29 +389,8 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
 
       </div>
     </div>
